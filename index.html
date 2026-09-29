@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f7f6" />
+  <meta name="description" content="Understand insurance policy wording and explore an illustrative treatment cost estimate." />
+  <title>Coverwise - Policy to Patient</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./workflow.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="Coverwise home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-name">coverwise<span class="brand-period">.</span></span>
+      </a>
+      <p class="workspace-label">WORKSPACE</p>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview"><span class="nav-symbol">&#9638;</span> Overview</a>
+        <a class="nav-item" href="#policy-card"><span class="nav-symbol">&#9635;</span> My policy</a>
+        <a class="nav-item" href="#estimate-panel"><span class="nav-symbol">&#9646;</span> Cost estimator</a>
+      </nav>
+
+      <section class="policy-card" id="policy-card" aria-label="Current policy document">
+        <div class="policy-card-top"><span class="policy-icon" aria-hidden="true">&#9776;</span><span class="status-dot" title="Ready"></span></div>
+        <p class="policy-card-label">YOUR POLICY</p>
+        <h2 id="policy-name">Care Supreme - Silver</h2>
+        <p class="policy-number" id="policy-status">Sample policy - ready to explore</p>
+        <div class="policy-card-divider"></div>
+        <div class="policy-pages"><span>Policy document</span><strong id="page-count">18 pages</strong></div>
+        <button class="text-button" id="replace-policy" type="button">Replace document <span aria-hidden="true">&#8599;</span></button>
+      </section>
+
+      <div class="sidebar-foot">
+        <span class="privacy-lock" aria-hidden="true">&#128274;</span>
+        <span><strong>Your information stays yours</strong><small>Files are processed in this browser.</small></span>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <div class="breadcrumb"><span>Workspace</span><span class="crumb-separator">/</span><strong>Policy overview</strong></div>
+        <div class="topbar-right"><span class="demo-pill"><i></i> HACKATHON DEMO</span><button class="help-button" type="button" id="help-button" aria-label="About this prototype">?</button></div>
+      </header>
+
+      <div class="page-content">
+        <section class="welcome-row">
+          <div><p class="eyebrow"><span class="sparkle">&#10022;</span> POLICY-TO-PATIENT INTELLIGENCE</p><h1>Clarity for the care<br class="desktop-break" /> you deserve.</h1><p class="welcome-copy">Understand your coverage, see what could be covered, and know what to ask next.</p></div>
+          <button class="upload-button" id="upload-trigger" type="button"><span aria-hidden="true">&#8593;</span> Upload a policy</button>
+          <input id="policy-file" type="file" accept=".pdf,.txt,application/pdf,text/plain" hidden />
+        </section>
+
+        <section class="summary-strip" aria-label="Sample policy summary">
+          <div class="summary-item"><span class="summary-icon coverage-icon" aria-hidden="true">&#10003;</span><span class="summary-copy"><small>SUM INSURED</small><strong id="sum-insured">&#8377;5,00,000</strong></span></div>
+          <span class="summary-divider"></span>
+          <div class="summary-item"><span class="summary-icon wait-icon" aria-hidden="true">&#9719;</span><span class="summary-copy"><small>WAITING PERIOD</small><strong id="waiting-period">24 months</strong></span></div>
+          <span class="summary-divider"></span>
+          <div class="summary-item"><span class="summary-icon limit-icon" aria-hidden="true">&#8645;</span><span class="summary-copy"><small>ROOM LIMIT</small><strong id="room-limit">&#8377;5,000 / day</strong></span></div>
+          <div class="summary-end"><span class="active-badge"><i></i> Demo policy active</span></div>
+        </section>
+
+        <div class="section-heading"><div><p class="section-kicker">YOUR COVERAGE, MADE CLEAR</p><h2>Explore your policy</h2></div><div class="section-actions"><span class="last-updated" id="policy-kind">Using a fictional sample policy</span><button class="text-button" id="view-all-policy" type="button">View source <span aria-hidden="true">&#8599;</span></button></div></div>
+
+        <div class="dashboard-grid">
+          <section class="panel chat-panel" aria-labelledby="chat-title">
+            <div class="panel-heading"><div class="panel-title-group"><span class="panel-heading-icon chat-heading-icon" aria-hidden="true">&#9993;</span><div><h2 id="chat-title">Ask your policy</h2><p>Answers grounded in your document</p></div></div><span class="chat-live-label"><i></i> Evidence-based</span></div>
+            <div class="chat-messages" id="chat-messages" aria-live="polite">
+              <div class="date-divider"><span>YOUR POLICY, EXPLAINED</span></div>
+              <article class="message user-message"><div class="message-avatar user-avatar">You</div><div class="message-body"><div class="message-meta"><strong>You</strong><time>Just now</time></div><div class="message-bubble user-bubble">Is knee replacement covered?</div></div></article>
+              <article class="message assistant-message"><div class="message-avatar assistant-avatar" aria-hidden="true">&#10022;</div><div class="message-body"><div class="message-meta"><strong>Coverwise assistant</strong><span class="verified-label"><i></i> Evidence found</span></div><div class="answer-text"><p>Your sample policy lists knee replacement as covered up to <strong>&#8377;2,00,000 per claim</strong>. The estimate may also be affected by the deductible, co-payment, and any waiting period that applies.</p><p class="answer-note">This fictional example is not a guarantee of claim approval. The hospital bill and claim review can change the final amount.</p></div><div class="citation-list"><button class="citation-chip" type="button" data-source="11"><span class="citation-page">11</span><span class="citation-section">Procedure sub-limit</span><span class="citation-arrow">&#8599;</span></button><button class="citation-chip" type="button" data-source="8"><span class="citation-page">8</span><span class="citation-section">Co-payment</span><span class="citation-arrow">&#8599;</span></button><button class="citation-chip" type="button" data-source="7"><span class="citation-page">7</span><span class="citation-section">Deductible</span><span class="citation-arrow">&#8599;</span></button></div></div></article>
+            </div>
+            <div class="suggested-questions" id="suggested-questions"><span>TRY ASKING</span><button type="button" data-question="What is the waiting period?">Waiting period</button><button type="button" data-question="What is my room rent limit?">Room rent limit</button><button type="button" data-question="What is excluded?">Exclusions</button></div>
+            <form class="chat-composer" id="chat-form"><label class="sr-only" for="chat-input">Ask a question about your policy</label><input id="chat-input" placeholder="Ask anything about your policy..." autocomplete="off" /><button type="submit" aria-label="Send question">&#10148;</button></form>
+            <p class="chat-footnote"><span aria-hidden="true">&#9670;</span> Every answer includes a source you can check.</p>
+          </section>
+
+          <section class="panel estimate-panel" id="estimate-panel" aria-labelledby="estimate-title">
+            <div class="panel-heading estimate-heading"><div class="panel-title-group"><span class="panel-heading-icon estimate-heading-icon" aria-hidden="true">&#9636;</span><div><h2 id="estimate-title">Treatment cost estimate</h2><p>A range based on treatment and policy details</p></div></div><span class="estimate-tag">ESTIMATE</span></div>
+            <div class="scenario-fields">
+              <label class="field-label" for="treatment-select">TREATMENT</label><div class="select-wrap"><select id="treatment-select"><option value="knee">Knee replacement</option><option value="cataract">Cataract surgery</option><option value="hernia">Hernia repair</option></select></div>
+              <label class="field-label purpose-label" for="treatment-purpose">TREATMENT TYPE</label><div class="select-wrap"><select id="treatment-purpose"><option value="medical">Medically necessary</option><option value="cosmetic">Cosmetic / without medical necessity</option><option value="experimental">Experimental / unproven</option></select></div>
+              <div class="field-row"><label><span class="field-label">POLICY START DATE</span><span class="date-input-wrap"><input type="date" id="policy-start" value="2024-01-01" /></span></label><label><span class="field-label">TREATMENT DATE</span><span class="date-input-wrap"><input type="date" id="treatment-date" /></span></label></div>
+              <label class="check-row"><input type="checkbox" id="pre-existing" /><span class="custom-check"></span><span>I have a pre-existing condition related to this treatment</span><button class="info-tip" type="button" title="Some conditions may have a waiting period in your policy." aria-label="Information about waiting periods">i</button></label>
+            </div>
+            <div class="estimate-divider"></div>
+            <div class="estimate-range-row"><div><span class="result-label">ESTIMATED TOTAL BILL</span><strong id="total-range">&#8377;2.3L - &#8377;3.0L</strong></div><span class="dataset-label"><i></i> Sample cost data</span></div>
+            <div class="cost-bar" aria-label="Estimated cost allocation"><span class="covered-segment" id="covered-segment"></span><span class="patient-segment" id="patient-segment"></span></div>
+            <div class="legend-row"><span><i class="legend-covered"></i> Potentially covered <strong id="covered-legend">&#8377;1.71L</strong></span><span><i class="legend-patient"></i> Your share <strong id="oop-legend">&#8377;0.59L - &#8377;1.29L</strong></span></div>
+            <div class="estimate-result"><div class="result-head"><span class="result-label">POTENTIAL OUT-OF-POCKET</span><button class="breakdown-toggle" type="button" id="breakdown-toggle" aria-expanded="false">View breakdown <span aria-hidden="true">&#8964;</span></button></div><div class="result-amount-row"><strong id="oop-range">&#8377;0.59L - &#8377;1.29L</strong><span class="estimate-confidence"><i></i> Indicative</span></div><div class="range-track"><span></span><i></i><i></i><i></i><i></i><b id="range-marker"></b></div><div class="range-captions"><span>LOWER ESTIMATE</span><span>HIGHER ESTIMATE</span></div><div class="breakdown-content" id="breakdown-content" hidden></div></div>
+            <div class="missing-info" id="eligibility-note"><span class="note-icon">i</span><span id="eligibility-text">Estimate assumes the waiting period is served and the treatment is eligible. Check your policy evidence for exclusions.</span><button class="inline-source" id="eligibility-source" type="button" data-source="18" hidden>View policy evidence</button></div>
+            <div class="estimate-footer"><span>Based on sample hospital rates</span><button type="button" class="text-button small" id="change-info">Adjust scenario <span aria-hidden="true">&#8599;</span></button></div>
+          </section>
+        </div>
+
+        <section class="workflow-section" aria-labelledby="hospital-title">
+          <div class="factors-heading workflow-heading"><div><p class="section-kicker">FROM POLICY TO CARE</p><h2>Review the hospital plan</h2></div><span class="last-updated">Add a quote to improve the estimate</span></div>
+          <div class="workflow-grid">
+            <section class="panel workflow-panel hospital-panel"><div class="workflow-panel-heading"><span class="workflow-icon hospital-icon" aria-hidden="true">&#8962;</span><div><h3 id="hospital-title">Hospital and cost details</h3><p>Optional details help narrow the estimate and surface questions.</p></div></div><div class="review-fields"><label class="review-field"><span>HOSPITAL NAME</span><input id="hospital-name" type="text" placeholder="e.g. CityCare Hospital" /></label><label class="review-field"><span>NETWORK STATUS</span><select id="network-status"><option value="unknown">Not confirmed</option><option value="network">In network</option><option value="out">Outside network</option></select></label><label class="review-field"><span>HOSPITAL QUOTE (&#8377;)</span><input id="hospital-quote" type="number" min="0" step="1000" placeholder="Leave blank to use sample range" /></label><label class="review-field"><span>ROOM RENT PER DAY</span><select id="room-rent"><option value="5000">Standard - &#8377;5,000</option><option value="8000">Private - &#8377;8,000</option><option value="12000">Deluxe - &#8377;12,000</option></select></label></div><div class="review-notice" id="hospital-review-note">No hospital quote entered; using fictional sample cost data.</div></section>
+            <section class="panel workflow-panel missing-panel" aria-labelledby="missing-title"><div class="workflow-panel-heading"><span class="workflow-icon missing-icon" aria-hidden="true">?</span><div><h3 id="missing-title">Information to confirm</h3><p id="missing-summary">We will list details that could change this estimate.</p></div></div><ul class="missing-list" id="missing-list"></ul></section>
+          </div>
+        </section>
+
+        <section class="panel what-if-panel" aria-labelledby="what-if-title"><div class="workflow-panel-heading compare-heading"><span class="workflow-icon compare-icon" aria-hidden="true">&#8644;</span><div><p class="section-kicker">WHAT-IF ANALYSIS</p><h3 id="what-if-title">Compare another hospital quote</h3><p>Keep the treatment and policy assumptions the same; change the quoted bill.</p></div></div><div class="comparison-layout"><div class="scenario-card current-scenario"><span class="scenario-label">CURRENT SCENARIO</span><strong id="current-scenario-cost">&#8377;2.3L - &#8377;3.0L</strong><span id="current-scenario-hospital">Sample cost range</span><small>Potential out-of-pocket: <b id="current-scenario-oop">&#8377;0.59L - &#8377;1.29L</b></small></div><div class="compare-arrow" aria-hidden="true">&#8594;</div><div class="scenario-card alternate-scenario"><label class="review-field"><span>WHAT IF THIS QUOTE?</span><input id="comparison-quote" type="number" min="0" step="1000" value="320000" /></label><label class="review-field"><span>ALTERNATE HOSPITAL</span><input id="comparison-hospital" type="text" placeholder="Hospital B" /></label><strong id="comparison-oop">&#8377;1.49L</strong><span>Potential out-of-pocket - <b id="comparison-hospital-name">Alternate hospital</b></span></div><div class="comparison-delta" id="comparison-delta">Add an alternate quote to compare.</div></div><p class="comparison-note" id="comparison-note">This comparison changes the bill amount only. It does not change eligibility or account for unlisted hospital/network rules.</p></section>
+
+        <div class="follow-through-grid">
+          <section class="panel workflow-panel preauth-panel" aria-labelledby="preauth-title"><div class="workflow-panel-heading"><span class="workflow-icon preauth-icon" aria-hidden="true">&#10003;</span><div><p class="section-kicker">BEFORE THE PROCEDURE</p><h3 id="preauth-title">Pre-authorization checklist</h3><p>Track the documents and confirmations to discuss with your hospital.</p></div></div><div class="checklist-items" id="preauth-checklist"><label class="checklist-item"><input type="checkbox" data-preauth-item /><span>Confirm the hospital is in the insurer's network</span></label><label class="checklist-item"><input type="checkbox" data-preauth-item /><span>Request an itemized estimate and treatment plan</span></label><label class="checklist-item"><input type="checkbox" data-preauth-item /><span>Ask the doctor for medical necessity notes</span></label><label class="checklist-item"><input type="checkbox" data-preauth-item /><span>Submit ID, policy card, and relevant medical records</span></label><label class="checklist-item"><input type="checkbox" data-preauth-item /><span>Get written pre-authorization and note any approved limits</span></label></div><div class="preauth-footer"><span id="checklist-progress">0 of 5 items ready</span><button type="button" class="secondary-button" id="print-preauth">Print checklist</button></div></section>
+          <section class="panel workflow-panel financial-panel" aria-labelledby="financial-title"><div class="workflow-panel-heading"><span class="workflow-icon financial-icon" aria-hidden="true">&#8377;</span><div><p class="section-kicker">PLAN YOUR SHARE</p><h3 id="financial-title">Patient financial summary</h3><p id="financial-status">Conditional estimate using fictional sample terms</p></div></div><div class="financial-stats"><div><span>ESTIMATED BILL</span><strong id="financial-total">&#8377;2.3L - &#8377;3.0L</strong></div><div><span>POTENTIAL COVER</span><strong id="financial-cover">&#8377;1.71L</strong></div><div class="patient-stat"><span>ESTIMATED PATIENT SHARE</span><strong id="financial-oop">&#8377;0.59L - &#8377;1.29L</strong></div></div><p class="financial-detail" id="financial-detail">Illustrative estimate; confirm all terms and charges.</p><div class="financial-sources" id="financial-sources"><span>POLICY EVIDENCE</span><button type="button" data-source="11">Procedure limit - p. 11</button></div><p class="financial-source-note" id="financial-source-note" hidden>Uploaded text can be searched, but sample policy factors still drive this estimate.</p></section>
+        </div>
+
+        <section class="factors-section" aria-labelledby="factors-title"><div class="factors-heading"><div><p class="section-kicker">HOW THE ESTIMATE IS BUILT</p><h2 id="factors-title">Policy factors in this example</h2></div><span class="last-updated">Fictional sample terms</span></div><div class="factors-grid"><button class="factor-card" type="button" data-source="11"><span>PROCEDURE LIMIT</span><strong>&#8377;2,00,000</strong><em>Knee replacement - p. 11</em></button><button class="factor-card" type="button" data-source="7"><span>ANNUAL DEDUCTIBLE</span><strong>&#8377;10,000</strong><em>Deductible - p. 7</em></button><button class="factor-card" type="button" data-source="8"><span>CO-PAYMENT</span><strong>10%</strong><em>Co-payment - p. 8</em></button></div></section>
+
+        <footer class="page-footer"><span>Coverwise prototype - verify policy wording and hospital charges before making decisions.</span><button type="button" class="text-button" id="footer-about">About this prototype</button></footer>
+      </div>
+    </main>
+  </div>
+
+  <dialog class="source-dialog" id="source-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><div><p class="section-kicker">POLICY EVIDENCE</p><h2 id="dialog-title">Policy source</h2><p id="dialog-meta">Fictional sample policy - PDF page</p></div><button class="dialog-close" id="dialog-close" type="button" aria-label="Close">&times;</button></div><blockquote id="dialog-quote"></blockquote><div class="dialog-actions"><button class="secondary-button" id="dialog-action" type="button">Done</button></div></dialog>
+  <dialog class="about-dialog" id="about-dialog" aria-labelledby="about-title"><div class="dialog-top"><div><p class="section-kicker">ABOUT THE DEMO</p><h2 id="about-title">Policy-to-Patient Intelligence</h2></div><button class="dialog-close" id="about-close" type="button" aria-label="Close">&times;</button></div><div class="about-copy"><p>Coverwise is a hackathon prototype for exploring policy wording and treatment costs.</p><p>The built-in policy and cost data are fictional. Uploaded text can be searched with page-level citations, but the estimator still uses sample policy terms and regional cost ranges. Scanned PDFs need OCR, which is not included.</p><p>Use the checklist to prepare questions for a hospital or insurer. This prototype does not make coverage decisions.</p></div><div class="dialog-actions"><button class="secondary-button" id="about-done" type="button">Got it</button></div></dialog>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

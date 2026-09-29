@@ -1,0 +1,602 @@
+.workflow-section {
+    margin-top: 30px
+}
+
+.workflow-heading {
+    margin-bottom: 13px
+}
+
+.workflow-grid,
+.follow-through-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    align-items: stretch
+}
+
+.workflow-panel {
+    padding: 17px 18px
+}
+
+.workflow-panel-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin-bottom: 15px
+}
+
+.workflow-panel-heading h3 {
+    margin: 0;
+    color: #213a35;
+    font: 700 13px var(--font-heading);
+    letter-spacing: -.2px
+}
+
+.workflow-panel-heading p {
+    margin: 4px 0 0;
+    color: #8d9a95;
+    font-size: 9px;
+    line-height: 1.5
+}
+
+.workflow-panel-heading .section-kicker {
+    margin: 0 0 5px;
+    font-size: 8px
+}
+
+.workflow-icon {
+    display: grid;
+    place-items: center;
+    width: 33px;
+    height: 33px;
+    flex: none;
+    border-radius: 9px;
+    font-size: 16px;
+    font-weight: 700
+}
+
+.hospital-icon {
+    background: #edf5f1;
+    color: #347f6e
+}
+
+.missing-icon {
+    background: #fbf4e9;
+    color: #a47e41
+}
+
+.compare-icon {
+    background: #edf2fa;
+    color: #617caa
+}
+
+.preauth-icon {
+    background: #edf6f1;
+    color: #4b8a73
+}
+
+.financial-icon {
+    background: #f3eff8;
+    color: #8d71a9
+}
+
+.review-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px 10px
+}
+
+.review-field {
+    display: block;
+    min-width: 0
+}
+
+.review-field>span {
+    display: block;
+    margin-bottom: 6px;
+    color: #95a19c;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .8px
+}
+
+.review-field input,
+.review-field select {
+    width: 100%;
+    height: 34px;
+    min-width: 0;
+    padding: 0 9px;
+    border: 1px solid #e5ebe8;
+    border-radius: 6px;
+    outline: 0;
+    background: #fff;
+    color: #51645c;
+    font-size: 10px
+}
+
+.review-field input::placeholder {
+    color: #a9b4af;
+    font-size: 9px
+}
+
+.review-field input:focus,
+.review-field select:focus {
+    border-color: #91bdae;
+    box-shadow: 0 0 0 3px #e9f5f0
+}
+
+.review-notice {
+    margin-top: 13px;
+    padding: 9px 10px;
+    border: 1px solid #e6eeea;
+    border-radius: 6px;
+    background: #f7faf8;
+    color: #74857d;
+    font-size: 8px;
+    line-height: 1.55
+}
+
+.review-notice.warning {
+    border-color: #f0e2c8;
+    background: #fffbf3;
+    color: #8f7952
+}
+
+.missing-panel {
+    display: flex;
+    flex-direction: column
+}
+
+.missing-list {
+    display: grid;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+.missing-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 9px;
+    border: 1px solid #edf0ee;
+    border-radius: 6px;
+    background: #fcfdfc;
+    color: #677871;
+    font-size: 9px;
+    line-height: 1.5
+}
+
+.missing-list li:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    flex: none;
+    margin-top: 4px;
+    border-radius: 50%;
+    background: #d3a452
+}
+
+.missing-item-text {
+    flex: 1
+}
+
+.missing-source {
+    flex: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #438371;
+    font-size: 8px;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.what-if-panel {
+    margin-top: 16px;
+    padding: 17px 18px
+}
+
+.compare-heading {
+    margin-bottom: 13px
+}
+
+.compare-heading h3 {
+    font-size: 15px
+}
+
+.comparison-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) minmax(140px, .65fr);
+    gap: 12px;
+    align-items: center
+}
+
+.scenario-card {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #e8eeeb;
+    border-radius: 8px;
+    background: #fafcfb
+}
+
+.scenario-card>strong {
+    color: #286454;
+    font: 700 18px var(--font-heading);
+    letter-spacing: -.4px
+}
+
+.scenario-card>span {
+    color: #899790;
+    font-size: 8px
+}
+
+.scenario-card>small {
+    color: #84928b;
+    font-size: 8px
+}
+
+.scenario-card>small b {
+    color: #536c60;
+    font-weight: 700
+}
+
+.scenario-label {
+    color: #99a49f !important;
+    font-size: 7px !important;
+    font-weight: 700;
+    letter-spacing: .8px
+}
+
+.alternate-scenario {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    background: #f5faf7;
+    border-color: #dfece5
+}
+
+.alternate-scenario .review-field:first-child {
+    grid-column: 1/-1
+}
+
+.alternate-scenario>strong {
+    grid-column: 1/-1;
+    margin-top: 5px
+}
+
+.alternate-scenario>span {
+    grid-column: 1/-1
+}
+
+.compare-arrow {
+    color: #9aaba3;
+    font-size: 17px
+}
+
+.comparison-delta {
+    padding: 9px 10px;
+    border-radius: 7px;
+    background: #f5f6f4;
+    color: #75827b;
+    font-size: 9px;
+    line-height: 1.5;
+    text-align: center
+}
+
+.comparison-delta.higher {
+    background: #fff6ee;
+    color: #a46f3a
+}
+
+.comparison-delta.lower {
+    background: #eff8f3;
+    color: #437c64
+}
+
+.comparison-note {
+    margin: 11px 0 0;
+    color: #98a39e;
+    font-size: 8px;
+    line-height: 1.55
+}
+
+.follow-through-grid {
+    margin-top: 16px
+}
+
+.checklist-items {
+    display: grid;
+    gap: 9px
+}
+
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: #64756d;
+    font-size: 9px;
+    line-height: 1.5;
+    cursor: pointer
+}
+
+.checklist-item input {
+    width: 14px;
+    height: 14px;
+    flex: none;
+    margin: 0;
+    accent-color: #2d806d
+}
+
+.checklist-item input:checked+span {
+    color: #94a19b;
+    text-decoration: line-through
+}
+
+.preauth-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #edf1ef;
+    color: #96a19b;
+    font-size: 8px
+}
+
+.secondary-button {
+    padding: 7px 9px;
+    border: 1px solid #dfe9e4;
+    border-radius: 6px;
+    background: #fff;
+    color: #3e7e6d;
+    font-size: 8px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.secondary-button:hover {
+    border-color: #a8cabb;
+    background: #f8fcfa
+}
+
+.financial-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px
+}
+
+.financial-stats>div {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #edf1ef;
+    border-radius: 7px;
+    background: #fcfdfc
+}
+
+.financial-stats>div span,
+.financial-stats>div strong {
+    display: block
+}
+
+.financial-stats>div span {
+    color: #9aa59f;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .65px
+}
+
+.financial-stats>div strong {
+    margin-top: 5px;
+    overflow: hidden;
+    color: #45645a;
+    font: 700 14px var(--font-heading);
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.financial-stats .patient-stat {
+    grid-column: 1/-1;
+    background: #f1f8f4;
+    border-color: #e2efe7
+}
+
+.financial-stats .patient-stat strong {
+    color: #1d705b;
+    font-size: 18px
+}
+
+.financial-detail {
+    margin-top: 11px;
+    color: #7c8a83;
+    font-size: 8px;
+    line-height: 1.6
+}
+
+.financial-sources {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px
+}
+
+.financial-sources>span {
+    margin-right: 3px;
+    color: #9aa59f;
+    font-size: 8px
+}
+
+.financial-sources button {
+    padding: 5px 7px;
+    border: 1px solid #e5ede8;
+    border-radius: 5px;
+    background: #fff;
+    color: #56776a;
+    font-size: 7px;
+    cursor: pointer
+}
+
+.financial-sources button:hover {
+    border-color: #b6d2c4;
+    background: #f5faf7
+}
+
+.financial-source-note {
+    margin: 12px 0 0;
+    color: #a27b48;
+    font-size: 8px;
+    line-height: 1.5
+}
+
+.inline-source {
+    flex: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #458372;
+    font-size: 8px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.inline-source[hidden] {
+    display: none
+}
+
+.factors-section[hidden] {
+    display: none
+}
+
+.summary-strip[hidden],
+#estimate-panel[hidden],
+.workflow-section[hidden],
+.what-if-panel[hidden],
+.follow-through-grid[hidden] {
+    display: none !important
+}
+
+.upload-notice {
+    margin: 18px auto;
+    max-width: 430px;
+    padding: 14px 16px;
+    border: 1px solid #dce9e1;
+    border-radius: 10px;
+    background: #f7fbf8;
+    color: #49675c;
+    font-size: 12px;
+    line-height: 1.6
+}
+
+.upload-notice.rejection {
+    border-color: #efd9d3;
+    background: #fff8f6;
+    color: #8b5144
+}
+
+@media(max-width:950px) {
+    .comparison-layout {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr)
+    }
+
+    .comparison-delta {
+        grid-column: 1/-1
+    }
+
+    .workflow-grid,
+    .follow-through-grid {
+        gap: 10px
+    }
+}
+
+@media(max-width:680px) {
+
+    .workflow-grid,
+    .follow-through-grid {
+        grid-template-columns: 1fr
+    }
+
+    .workflow-panel {
+        padding: 15px
+    }
+
+    .what-if-panel {
+        padding: 15px
+    }
+
+    .comparison-layout {
+        grid-template-columns: 1fr
+    }
+
+    .compare-arrow {
+        transform: rotate(90deg);
+        text-align: center
+    }
+
+    .comparison-delta {
+        grid-column: auto
+    }
+
+    .workflow-heading {
+        align-items: flex-end
+    }
+
+    .workflow-heading .last-updated {
+        max-width: 130px;
+        text-align: right
+    }
+
+    .financial-stats>div strong {
+        font-size: 13px
+    }
+
+    .financial-stats .patient-stat strong {
+        font-size: 18px
+    }
+}
+
+@media print {
+
+    .sidebar,
+    .topbar,
+    .welcome-row,
+    .summary-strip,
+    .section-heading,
+    .dashboard-grid,
+    .workflow-section,
+    .what-if-panel,
+    .financial-panel,
+    .factors-section,
+    .page-footer {
+        display: none !important
+    }
+
+    .main-content {
+        margin: 0
+    }
+
+    .page-content {
+        max-width: none;
+        padding: 0
+    }
+
+    .follow-through-grid {
+        display: block
+    }
+
+    .preauth-panel {
+        border: 0;
+        box-shadow: none
+    }
+
+    .secondary-button {
+        display: none
+    }
+
+    .preauth-panel .workflow-panel-heading p:last-child {
+        color: #333
+    }
+}
